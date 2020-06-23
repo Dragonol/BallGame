@@ -5,7 +5,8 @@ using UnityEngine;
 public class NodeScript : MonoBehaviour
 {
     public float PushForce;
-    public Vector2 Direction;
+    private bool isCharge = true;
+    public Vector2 dir;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,21 +19,21 @@ public class NodeScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("hello");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && isCharge)
         {
             GameObject player = collision.gameObject;
             Rigidbody2D pRb2d = player.GetComponent<Rigidbody2D>();
-            //Vector2 currDir = pRb2d.velocity;
-            //Vector2 contactNormal = pRb2d.transform.position - transform.position;
-            //Debug.Log("Normal: x: " + contactNormal.x + " y: " + contactNormal.y);
-            //Debug.Log("Velocity: x: " + currDir.x + " y: " + currDir.y);
-            //Vector2 newDir = Vector2.Reflect(currDir, contactNormal);
-            //Debug.Log("New Dir: x: " + newDir.x + " y: " + newDir.y);
-            //pRb2d.AddForce(newDir.normalized * PushForce);
-            pRb2d.AddForce(Direction * PushForce);
+            dir = (Vector2)(Quaternion.Euler(transform.rotation.eulerAngles) * Vector2.up);
+            Debug.Log(dir);
+            pRb2d.AddForce(dir * PushForce);
+            isCharge = false;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isCharge = true;
     }
 }
