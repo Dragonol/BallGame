@@ -6,7 +6,7 @@ public class NodeScript : MonoBehaviour
 {
     public float PushForce;
     private bool isCharge = true;
-    public Vector2 dir;
+    private Vector2 dir;
     // Start is called before the first frame update
     void Start()
     {
