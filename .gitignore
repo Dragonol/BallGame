@@ -2,7 +2,7 @@
 # Unity folders and files
 ###
 
-*.apk
+.apk
 [Aa]ssets/AssetStoreTools*
 [Bb]uild/
 [Ll]ibrary/
