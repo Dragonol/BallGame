@@ -286,7 +286,7 @@ TextureImporter:
         y: 1181
         width: 259
         height: 258
-      alignment: 0
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -560,7 +560,7 @@ TextureImporter:
         width: 256
         height: 309
       alignment: 9
-      pivot: {x: 0.5, y: 0.4142395}
+      pivot: {x: 0.5, y: 0.828479}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -568,6 +568,48 @@ TextureImporter:
       bones: []
       spriteID: 437ea36c22c14c180800000000000000
       internalID: -9096114411701344460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameAssets_14
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 314
+        width: 769
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e21105e5d2c6090800000000000000
+      internalID: -8040001351669699060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameAssets_15
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 379
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a22c6dd8fee36ea0800000000000000
+      internalID: -5880593935781584218
       vertices: []
       indices: 
       edges: []
